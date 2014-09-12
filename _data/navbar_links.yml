@@ -10,8 +10,8 @@
 - name: "Contacts"
   url: "contacts.html"
 
-- name: "About Us"
-  url: "aboutus.html"
+##- name: "About Us"
+##  url: "aboutus.html"
 
 ##- name: "Blog"
 ##  url: "blog.html"
