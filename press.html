@@ -17,7 +17,7 @@
     <article>
       <header>
         <h1><a href="{% unless site.baseurl == "/news" %}{{ site.baseurl }}{% endunless %}{{ post.url }}">{{ post.title }}</a></h1>
-        <p>Posted on {{ post.date | date: "%B %d, %Y" }} by {{ post.author }}</p>
+        <p>{{ post.date | date: "%B %d, %Y" }} - {{ post.author }}</p>
       </header>
       <div class="entry-content">
         {{ post.content | strip_html | truncatewords: 15 }}
