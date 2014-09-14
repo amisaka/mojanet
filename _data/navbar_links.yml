@@ -7,20 +7,15 @@
 - name: "News & Events"
   url: "press.html"
 
-<<<<<<< HEAD
 - name: "Blog"
   url: "blog.html"
-=======
+
 - name: "Contacts"
   url: "contacts.html"
 
 ##- name: "About Us"
 ##  url: "aboutus.html"
 
-##- name: "Blog"
-##  url: "blog.html"
->>>>>>> 6182ea4bbb95e457be27fe1c59022785e5668023
- 
 - name: "Company"
   child_links: 
   - name: "Contacts"
