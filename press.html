@@ -1,16 +1,18 @@
 ---
   layout: base
   category: news
-  title: News 
+  title: News and Events 
 ---
 
 <div class="page-title-bar">
   <div class="inner-content">
-    <h2>News & Events</h2>
+    <h2>{{ page.title }}</h2>
   </div>
 </div>
 
+<div class="page-type-subnav">
 <div id="blog">
+
   <div id="blog-content">
     {% for post in site.posts %}
     {% if post.categories contains 'news' %}
@@ -55,4 +57,5 @@
     </ul>
 
   </div>
+</div>
 </div>

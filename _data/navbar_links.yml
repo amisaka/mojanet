@@ -7,8 +7,8 @@
 - name: "News & Events"
   url: "press.html"
 
-- name: "Blog"
-  url: "blog.html"
+## - name: "Blog"
+##  url: "blog.html"
 
 - name: "Contacts"
   url: "contacts.html"
