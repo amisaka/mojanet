@@ -14,6 +14,7 @@
 @import "components/bordered-list";
 @import "components/nav";
 @import "components/pygments"; // code highlighting styles
+// @import "components/dropdowns";  // includec by Misaka
 
 // Regular imports
 @import "site/fonts";
@@ -164,7 +165,7 @@ pre {
     &:visited {
       border: none;
       border-right: 1px solid lighten($dark-bg, 10%);
-    }
+    } 
     &:hover,
     &:active,
     &:focus,
@@ -175,6 +176,35 @@ pre {
       border-right: none;
     }
   }
+}
+
+#nav ul {
+  margin:0;
+  padding: 0;
+}
+
+#nav li {
+  list-style: none;
+  float: left;
+  position: relative;
+}
+
+#nav ul li a {
+  color: white;
+  text-align: center;
+  text-decoration:none;
+  width: 50px;
+  height: 30px;
+  display: block;
+}
+
+#nav ul ul {
+  position: absolute;
+  display: none;
+}
+
+#nav ul li:hover ul {
+  display: block;
 }
 
 #banner {

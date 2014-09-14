@@ -7,17 +7,19 @@
 - name: "News & Events"
   url: "press.html"
 
+- name: "Blog"
+  url: "blog.html"
+
 - name: "Contacts"
   url: "contacts.html"
 
 ##- name: "About Us"
 ##  url: "aboutus.html"
 
-##- name: "Blog"
-##  url: "blog.html"
- 
-##- name: "."
-##  child_links: 
-##    - name: ""
-##      url: ""
+- name: "Company"
+  child_links: 
+  - name: "Contacts"
+    url: "contacts.html"
+  - name: "About Us"
+    url: "aboutus.html"
   
