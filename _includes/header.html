@@ -1,34 +1,38 @@
 <div id="header">
   <div class="inner-content"> 
-   <nav id="nav"> 
-    <ul class="nav">
-      <img src="/images/mojalogo1.png" alt="www.mojatatu.com" style="float:left" width="200" height="45">&nbsp;&nbsp;
-      {% for navbar_link in site.data.navbar_links %}
-         {% if navbar_link.child_links %}
-          <a class="dropdown-toggle" data-toggle="dropdown" data-target="#">{{ navbar_link.name }} <b class="caret"></b></a>
-           {% if navbar_link.name == page.title %}
-             <div class="dropdown active">
-           {% else %}
-             <div class="dropdown">
-           {% endif %}  
-            <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
-               {% for child_link in navbar_link.child_links %}
-                  {% if child_link.divider %}
-                     <li><a href="{{site.baseurl}}{{child_link.url}}">{{ child_link.name }}</a></li>
-                     <li class="divider"></li>
+    <nav id="nav"> 
+      <nav class="site-nav">
+        <div class="trigger">
+          <ul class="nav">
+            <img src="/images/mojalogo1.png" alt="www.mojatatu.com" style="float:left" width="200" height="45">&nbsp;&nbsp;
+              {% for navbar_link in site.data.navbar_links %}
+                {% if navbar_link.child_links %}
+                  <a class="dropdown-toggle" data-toggle="dropdown" data-target="#">{{ navbar_link.name }}<b class="caret"></b></a>
+                  {% if navbar_link.name == page.title %}
+                    <div class="dropdown active">
                   {% else %}
-                     <li><a href="{{site.baseurl}}{{child_link.url}}">{{ child_link.name }}</a></li>
-                  {% endif %}
-               {% endfor %}
-            </ul>
-          </div>
-         {% elsif navbar_link.name == page.title %}
-            <a href="{{site.baseurl}}{{navbar_link.url}}">{{ navbar_link.name }}</a>
-         {% else %}
-           <a href="{{site.baseurl}}{{ navbar_link.url }}">{{ navbar_link.name }}</a>
-         {% endif %}
-     {% endfor %} 
-       </ul>
+                    <div class="dropdown">
+                  {% endif %}  
+                    <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+                  {% for child_link in navbar_link.child_links %}
+                    {% if child_link.divider %}
+                      <li><a class="page-link" href="{{ site.url }}/{{ child_link.url }}">{{ child_link.name }}</a></li>
+                      <li class="divider"></li>
+                    {% else %}
+                      <li><a class="page-link" href="{{ site.url }}/{{ child_link.url }}">{{ child_link.name }}</a></li>
+                    {% endif %}
+                  {% endfor %}
+                </ul>
+              </div>
+              {% elsif navbar_link.name == page.title %}
+                <a class="page-link" href="{{ site.url }}/{{ navbar_link.url }}">{{ navbar_link.name }}</a>
+              {% else %}
+                <a class="page-link" href="{{ site.url }}/{{ navbar_link.url }}">{{ navbar_link.name }}</a>
+              {% endif %}
+            {% endfor %} 
+          </ul>
+        </div>
+      </nav>
     </nav> 
   <!--  
     <div id="social">
