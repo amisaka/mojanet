@@ -209,7 +209,7 @@ pre {
 
 #banner {
   // Cactus
-  background: #1E2A28 url(../images/earthnetworking2.jpg) center center;
+  background: #1E2A28 url(../images/SCD02.png) center center;
 
   @include background-size('cover');
   margin: 0 0 20px;
@@ -243,7 +243,7 @@ pre {
     color: #FFF;
     line-height: 1.33;
     margin: 0;
-    @include opacity(0.75);
+    @include opacity(0.85);
   }
 
   // Offset
@@ -260,7 +260,8 @@ pre {
     &:after {
       content: none;
     }
-    height: 303px;
+//    height: 303px;
+    height: 695px;
     padding: 0;
     .copy {
       background: #000;
